@@ -1,0 +1,13 @@
+<h1>Sign up</h1>
+
+<%= form_with model: @user, local: true do |form| %>
+  <%= form.label :username %></br>
+  <%= form.text_field :username %></br></br>
+  <%= form.label :fullname , 'Full name' %></br>
+  <%= form.text_field :fullname %></br></br>
+  <%= form.label :photo %></br>
+  <%= form.text_field :photo %></br></br>
+  <%= form.label :coverimage, 'Cover Image' %></br>
+  <%= form.text_field :coverimage %></br></br>
+  <%= form.submit 'Sign up' %>
+<% end %>
