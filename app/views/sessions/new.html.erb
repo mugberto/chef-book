@@ -1,0 +1,7 @@
+<h1>Sign in</h1>
+
+<%= form_with scope: :user, url: sessions_path, method: 'post', local:true do |form| %>
+<%= form.label :username, 'Username' %>
+<%= form.text_field :username %>
+<%= form.submit 'Sign in' %>
+<% end %>

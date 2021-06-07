@@ -13,7 +13,10 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
-
+    <% if current_user %>
+    <span>You are logged as <%= current_user.fullname %>| <%= link_to "logout", session_path(1), method: :delete, data: {confirm: 'Are you sure?'} %> </span>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
