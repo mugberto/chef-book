@@ -13,6 +13,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to new_user_path, notice: 'User profile modified'
+    else
+      flash.now[:alert] = 'User profile not modified'
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to new_user_path, notice: 'User removed'
+  end
+
   private
 
   def user_params
