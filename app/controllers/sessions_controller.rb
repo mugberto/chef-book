@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    render 'new', layout: 'auth_layout'
+  end
 
   def create
     if User.authenticated user_params
       @user = User.find_by(username: user_params[:username])
       session[:user_id] = @user.id
-      redirect_to new_user_path, notice: 'Logged in successfully'
+      redirect_to root_path, notice: 'Logged in successfully'
     else
       flash.now[:alert] = 'Sign in failed!'
       render 'new'

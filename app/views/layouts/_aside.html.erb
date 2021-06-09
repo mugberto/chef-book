@@ -8,11 +8,11 @@
 </div>
 <div class='row py-4 border-bottom border-1 border-secondary'>
   <div class='col-6 p-4'>
-    <div class='text-center'>124</div>
+    <div class='text-center'><%= current_user.followers.count %></div>
     <div class='text-center'>followers</div>
   </div>
   <div class='col-6 p-4'>
-    <div class='text-center'>54</div>
+    <div class='text-center'><%= current_user.people_he_follows.count%></div>
     <div class='text-center'>following</div>
   </div>
 </div>
