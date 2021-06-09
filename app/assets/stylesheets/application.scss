@@ -11,3 +11,11 @@
  * It is generally better to create a new file per style scope.
  */
  @import "bootstrap";
+
+ .app-aside {
+   background-color: rgb(0, 48, 0);
+ }
+
+ .brand-logo {
+   max-height: 3rem;
+ }

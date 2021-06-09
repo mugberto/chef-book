@@ -10,15 +10,25 @@
   </head>
 
   <body>
-    <div class='container'>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: name %>
-      <% end %>
-      <% if current_user %>
-      <span>You are logged as <%= current_user.fullname %>| <%= link_to "logout", session_path(1), method: :delete, data: {confirm: 'Are you sure?'} %> </span>
-      <% end %>
+    <div class='container-fluid'>
+      <div class="row">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: msg_background(name) %>
+        <% end %>
+      </div>
+      <div class='row'>
+        <aside class='app-aside col-3 col-xl-2 vh-100 py-4 text-white'>
+          <%= render 'layouts/aside' %>
+        </aside>
+        <div class='col-9 col-xl-10'>
+          <nav class='row p-3 top-nav bg-success text-white justify-content-between'>
+            <%= render 'layouts/navbar' %>
+          </nav>
+          <div class='row'>
+            <%= yield %>
+        </div>
+      </div>
     
-      <%= yield %>
     </div>
   </body>
 </html>
