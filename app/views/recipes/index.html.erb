@@ -1,3 +1,8 @@
 <h1>Recipes</h1>
 
+<%= form_with model: @recipe, local: true do |form| %>
+  <%= form.text_area :description, placeholder: 'Add your recipe' %></br>
+  <%= form.submit 'Add' %>
+<% end %>
+
 <ul><%= render @recipes %></ul>

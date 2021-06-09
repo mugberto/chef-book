@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'Logged in successfully'
     else
       flash.now[:alert] = 'Sign in failed!'
-      render 'new'
+      render 'new', layout: 'auth_layout'
     end
   end
 
