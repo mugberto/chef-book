@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
   def index
     @recipe = Recipe.new
     @recipes = current_user.recipes_of_people_he_follows_and_his
+    @people_to_follow = User.all.reject { |user| current_user.followed_user?(user) or user == current_user }
   end
 
   def create

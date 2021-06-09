@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'recipes#index'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :recipes
-  root to: 'recipes#index'
+  post 'follow/new', to: 'followings#create', as: 'follow' 
 end

@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def recipes_of_people_he_follows_and_his
     Recipe.where(user: (people_he_follows.to_a << self)).ordered_by_most_recent
   end
+
+  def followed_user?(user)
+    people_he_follows.include? user
+  end
 end

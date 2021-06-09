@@ -3,7 +3,7 @@
     <img src='https://avatarfiles.alphacoders.com/103/103373.png' class='rounded-circle d-block w-100' alt='profile-picture'>
   </div>
   <div class='col-sm-12 col-md-7 text-center d-flex justify-content-center align-items-center'>
-    <div class='aside-user-fullname'>User Fullname</div>
+    <div class='aside-user-fullname'><%= current_user.fullname %></div>
   </div>
 </div>
 <div class='row py-4 border-bottom border-1 border-secondary'>
@@ -17,7 +17,7 @@
   </div>
 </div>
 <nav class='aside-links mt-4 d-grid'>
-  <%= link_to "HOME", '#', class:'aside-link btn btn-outline-light border-0 rounded-0' %>
+  <%= link_to "HOME", root_path, class:'aside-link btn btn-outline-light border-0 rounded-0' %>
   <%= link_to "CONNECT", '#', class:'aside-link btn btn-outline-light border-0 rounded-0' %>
   <%= link_to "PROFILE", '#', class:'aside-link btn btn-outline-light border-0 rounded-0' %>
 </nav>
