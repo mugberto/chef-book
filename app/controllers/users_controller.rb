@@ -4,6 +4,11 @@ class UsersController < ApplicationController
     render 'new', layout: 'auth_layout'
   end
 
+  def show
+    @user = User.find(params[:id])
+    @recipes = @user.recipes
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

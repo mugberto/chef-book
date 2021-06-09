@@ -1,1 +1,1 @@
-<li><%= person_to_follow.fullname %> <%= button_to "follow", follow_path, params: { followed_id: person_to_follow.id } %></li>
+<li><%= person_to_follow.fullname %> <%= follow_btn person_to_follow %></li>

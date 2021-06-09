@@ -1,0 +1,39 @@
+<div class="col-md-9 bg-light">
+  <h1>RECIPES</h1>
+  <%= form_with model: @recipe, local: true do |form| %>
+    <%= form.text_area :description, placeholder: 'Add your recipe' %></br>
+    <%= form.submit 'Add' %>
+  <% end %>
+  
+  <ul><%= render @recipes %></ul>
+</div>
+  <div class="flex-shrink-1 bg-light ms-1">
+    <div class='row p-4'>
+    <div class='col'>
+      <img src='https://avatarfiles.alphacoders.com/103/103373.png' class='rounded-circle d-block w-100' alt='profile-picture'>
+      <div class='aside-user-fullname text-center'><%= @user.fullname %></div>
+      <%= follow_btn @user %>
+    </div>
+  </div>
+  <div class='row py-4 border-bottom border-1 border-secondary'>
+    <div class='col-4 p-4'>
+      <div class='text-center'><%= @user.recipes.count %></div>
+      <div class='text-center'>Recipes</div>
+    </div>
+    <div class='col-4 p-4'>
+      <div class='text-center'><%= @user.followers.count %></div>
+      <div class='text-center'>followers</div>
+    </div>
+    <div class='col-4 p-4'>
+      <div class='text-center'><%= @user.people_he_follows.count%></div>
+      <div class='text-center'>following</div>
+    </div>
+  </div>
+  <div class="flex-shrink-1 bg-light ms-1">
+    <h2><%= @user.fullname %>'s followers</h2>
+    <ul>
+      <%= render partial: 'recipes/person_to_follow', collection: @user.followers %>
+    </ul>
+  </div>
+
+</div>

@@ -12,8 +12,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to root_path, notice: 'A new recipe added!'
     else
-      flash.now[:alert] = 'Error: no recipe added!'
-      render :index
+      redirect_to root_path, alert: 'Error: no recipe added!'
     end
   end
 
