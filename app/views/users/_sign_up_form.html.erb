@@ -1,13 +1,22 @@
-<%= form_with model: user, local: true do |form| %>
-  <%= form.label :username %></br>
-  <%= form.text_field :username %></br></br>
-  <%= form.label :fullname , 'Full name' %></br>
-  <%= form.text_field :fullname %></br></br>
-  <%= form.label :photo %></br>
-  <%= form.text_field :photo %></br></br>
-  <%= form.label :coverimage, 'Cover Image' %></br>
-  <%= form.text_field :coverimage %></br></br>
-  <%= form.submit action %>
-<% end %>
 
-<%= link_to_log_in_page %>
+    <%= form_with model: user, local: true do |form| %>
+      <fieldset class='py-3'>
+        <%= form.label :username, class: 'form-label' %>
+        <%= form.text_field :username, class: 'form-control' %>
+      </fieldset>
+      <fieldset class='py-3'>
+        <%= form.label :fullname , 'Full name', class: 'form-label' %>
+        <%= form.text_field :fullname, class: 'form-control' %>
+      </fieldset>
+      <fieldset class='py-3'>
+        <%= form.label :photo, class: 'form-label' %>
+        <%= form.text_field :photo, class: 'form-control' %>
+      </fieldset>
+      <fieldset class='py-3'>
+        <%= form.label :coverimage, 'Cover Image', class: 'form-label' %>
+        <%= form.text_field :coverimage, class: 'form-control' %>
+      </fieldset>
+      <fieldset class="py-3"><%= form.submit action, class: 'form-control bg-primary text-white' %></fieldset>
+    <% end %>
+    <%= link_to_log_in_page %>
+  

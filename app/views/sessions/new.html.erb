@@ -1,8 +1,21 @@
-<h1>Sign in</h1>
+<div class="col-sm-12 col-md-4 p-4">
+  <h1 class="text-center pb-3"><%= image_tag "chefbook_logo", height: 200 %></h1>
+  <p class='text-center fs-1'>Welcome to Chefbook</p>
+  <div class="sign-up-form mt-4 p-4 border">
 
-<%= form_with scope: :user, url: sessions_path, method: 'post', local:true do |form| %>
-<%= form.label :username, 'Username' %>
-<%= form.text_field :username %>
-<%= form.submit 'Sign in' %>
-<% end %>
-Have no account? <%= link_to "Sign up", new_user_path %>
+    <h2>Sign in</h2>
+
+    <%= form_with scope: :user, url: sessions_path, method: 'post', local:true do |form| %>
+      <fieldset class= 'py-3'>
+        <%= form.label :username, 'Username', class: 'form-label' %>
+        <%= form.text_field :username, class: 'form-control' %>
+      </fieldset>
+      <fieldset class= 'py-3'>
+        <%= form.submit 'Sign in', class: 'form-control bg-primary text-white' %>
+      </fieldset>
+    <% end %>
+    Have no account? <%= link_to "Sign up", new_user_path %>
+
+  </div>
+  
+</div>
