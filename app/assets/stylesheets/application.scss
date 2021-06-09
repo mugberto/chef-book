@@ -23,3 +23,9 @@
  .brand-logo {
    max-height: 3rem;
  }
+
+ .cover-image {
+  height: calc( 100vw / 5);
+  background-position: center;
+  background-size: cover;
+}
