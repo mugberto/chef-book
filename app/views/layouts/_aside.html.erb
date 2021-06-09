@@ -19,5 +19,5 @@
 <nav class='aside-links mt-4 d-grid'>
   <%= link_to "HOME", root_path, class:'aside-link btn btn-outline-light border-0 rounded-0' %>
   <%= link_to "CONNECT", users_path, class:'aside-link btn btn-outline-light border-0 rounded-0' %>
-  <%= link_to "PROFILE", '#', class:'aside-link btn btn-outline-light border-0 rounded-0' %>
+  <%= link_to "PROFILE", edit_user_path(current_user), class:'aside-link btn btn-outline-light border-0 rounded-0' %>
 </nav>
