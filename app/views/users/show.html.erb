@@ -2,10 +2,6 @@
   <div class='cover-image' style="background-image: url(https://images.unsplash.com/photo-1608408843596-b3119736057c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2095&q=80)">.</div>
 
   <h1>RECIPES</h1>
-  <%= form_with model: @recipe, local: true do |form| %>
-    <%= form.text_area :description, placeholder: 'Add your recipe' %></br>
-    <%= form.submit 'Add' %>
-  <% end %>
   
   <ul><%= render @recipes %></ul>
 </div>
