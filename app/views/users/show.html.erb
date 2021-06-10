@@ -11,7 +11,7 @@
 <div class="flex-shrink-1 bg-light ms-1">
   <div class='row pt-4'>
     <div class='col'>
-      <%= profile_picture %>
+      <%= profile_picture @user %>
       <div class='aside-user-fullname text-center p-3'><%= @user.fullname %></div>
       <div class="text-center p-3"><%= follow_btn @user %></div>
     </div>

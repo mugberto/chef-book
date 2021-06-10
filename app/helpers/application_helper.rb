@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def avatar
-    if !current_user.photo.nil? or !current_user.photo.nil?
+    if (!current_user.photo != '') and !current_user.photo.nil?
       return image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle'
     end
 
@@ -24,9 +24,9 @@ module ApplicationHelper
               class: 'rounded-circle w-100'
   end
 
-  def profile_picture
-    if current_user.photo != ''
-      return image_tag current_user.photo, class: 'avatar-image w-75 rounded-circle d-block mx-auto'
+  def profile_picture(user)
+    if (user.photo != '') and !user.photo.nil?
+      return image_tag user.photo, class: 'avatar-image w-75 rounded-circle d-block mx-auto'
     end
 
     image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
