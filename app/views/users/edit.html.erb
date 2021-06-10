@@ -1,16 +1,18 @@
 
 
 <div class="col-md-9 bg-light">
-  <div class='cover-image' style="background-image: url(https://images.unsplash.com/photo-1608408843596-b3119736057c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2095&q=80)"></div>
-  <h1>EDIT YOUR PROFILE</h1>
+  <div class="row">
+    <div class='cover-image' style=<%= cover_image(current_user) %>></div>
+  </div>
+  <h2 class='p-4'>EDIT YOUR PROFILE</h2>
 
-  <%= render 'sign_up_form', user: current_user, action: 'Modify' %>
+  <div class="p-4"><%= render 'sign_up_form', user: current_user, action: 'Modify' %></div>
 </div>
 
 <div class="flex-shrink-1 bg-light ms-1">
   <div class='row pt-4'>
     <div class='col'>
-      <img src='https://avatarfiles.alphacoders.com/103/103373.png' class='rounded-circle d-block w-75 mx-auto' alt='profile-picture'>
+      <%= profile_picture %>
       <div class='aside-user-fullname text-center p-3'><%= @user.fullname %></div>
       <div class="text-center p-3"><%= follow_btn @user %></div>
     </div>

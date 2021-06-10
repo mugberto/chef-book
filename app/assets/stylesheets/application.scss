@@ -29,3 +29,13 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.avatar-image {
+  object-fit: cover;
+}
+
+.avatar-placeholder  {
+  background-color: gray;
+  width: 150px;
+  height: 150px;
+}
