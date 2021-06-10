@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'LogIns', type: :feature do
   before :each do
-    current_user = User.create(username: 'existingusername', fullname: 'Existing User')
+    User.create(username: 'existingusername', fullname: 'Existing User')
   end
 
   scenario 'Expected to succeed if the username exists' do
