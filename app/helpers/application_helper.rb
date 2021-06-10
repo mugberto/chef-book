@@ -23,7 +23,9 @@ module ApplicationHelper
   end
 
   def profile_picture
-    return image_tag current_user.photo, class: 'avatar-image w-75 rounded-circle d-block mx-auto' if current_user.photo != ''
+    if current_user.photo != ''
+      return image_tag current_user.photo, class: 'avatar-image w-75 rounded-circle d-block mx-auto'
+    end
 
     image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
       'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg',\
