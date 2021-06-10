@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to new_user_path, notice: 'Signed up successfully'
+      redirect_to new_session_path, notice: 'Signed up successfully'
     else
       flash.now[:alert] = 'Sign up not successful'
       render :new
