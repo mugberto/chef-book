@@ -2,11 +2,11 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :fullname, presence: true
 
-  has_many :followings, class_name: 'Following', foreign_key: :follower_id
-  has_many :reversed_followings, class_name: 'Following', foreign_key: :followed_id
+  has_many :followings, class_name: 'Following', foreign_key: :follower_id, dependent: :destroy
+  has_many :reversed_followings, class_name: 'Following', foreign_key: :followed_id, dependent: :destroy
   has_many :people_he_follows, through: :followings, source: :whom_he_follows
   has_many :followers, through: :reversed_followings
-  has_many :recipes
+  has_many :recipes, dependent: :destroy
 
   def self.authenticated(user_params)
     one? { |user| user.username == user_params[:username] }
