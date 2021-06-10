@@ -1,15 +1,16 @@
-<div class="col-md-9 bg-light">
-  <h1>RECIPES</h1>
+<div class="col-md-9 bg-light p-4">
+  <h2 class="p-2">RECIPES</h1>
   <%= form_with model: @recipe, local: true do |form| %>
-    <%= form.text_area :description, placeholder: 'Add your recipe' %></br>
-    <%= form.submit 'Add' %>
+    <fieldset class="p-2"><%= form.text_area :description, class:'form-control', placeholder: 'Add your recipe' %></fieldset>
+    <%= form.submit 'Add', class: 'btn btn-success ms-2' %>
   <% end %>
   
-  <ul><%= render @recipes %></ul>
+  <div class='list-group p-2 mt-4'><%= render @recipes %></div>
 </div>
-<div class="flex-shrink-1 bg-light ms-1">
-  <h2>HOW TO FOLLOW</h2>
-  <ul>
+
+<div class="flex-shrink-1 bg-light ms-1 p-4">
+  <h3>HOW TO FOLLOW</h3>
+  <ul class='list-group'>
     <%= render partial: 'person_to_follow', collection: @people_to_follow %>
   </ul>
 </div>

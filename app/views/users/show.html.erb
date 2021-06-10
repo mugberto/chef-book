@@ -1,21 +1,21 @@
 <div class="col-md-9 bg-light">
   <div class='cover-image' style="background-image: url(https://images.unsplash.com/photo-1608408843596-b3119736057c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2095&q=80)">.</div>
 
-  <h1>RECIPES</h1>
+  <h1 class='p-4 ms-1'>RECIPES</h1>
   
   <ul><%= render @recipes %></ul>
 </div>
 
 <div class="flex-shrink-1 bg-light ms-1">
-  <div class='row p-4'>
+  <div class='row pt-4'>
     <div class='col'>
-      <img src='https://avatarfiles.alphacoders.com/103/103373.png' class='rounded-circle d-block w-100' alt='profile-picture'>
-      <div class='aside-user-fullname text-center'><%= @user.fullname %></div>
-      <%= follow_btn @user %>
+      <img src='https://avatarfiles.alphacoders.com/103/103373.png' class='rounded-circle d-block w-75 mx-auto' alt='profile-picture'>
+      <div class='aside-user-fullname text-center p-3'><%= @user.fullname %></div>
+      <div class="text-center p-3"><%= follow_btn @user %></div>
     </div>
   </div>
 
-  <div class='row py-4 border-bottom border-1 border-secondary'>
+  <div class='row border-bottom border-1 border-secondary'>
     <div class='col-4 p-4'>
       <div class='text-center'><%= @user.recipes.count %></div>
       <div class='text-center'>Recipes</div>

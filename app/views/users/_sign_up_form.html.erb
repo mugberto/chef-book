@@ -10,11 +10,11 @@
       </fieldset>
       <fieldset class='py-3'>
         <%= form.label :photo, class: 'form-label' %>
-        <%= form.text_field :photo, class: 'form-control' %>
+        <%= form.text_field :photo, class: 'form-control', placeholder: 'Add a link to the image' %>
       </fieldset>
       <fieldset class='py-3'>
         <%= form.label :coverimage, 'Cover Image', class: 'form-label' %>
-        <%= form.text_field :coverimage, class: 'form-control' %>
+        <%= form.text_field :coverimage, class: 'form-control', placeholder: 'Add a link to the image' %>
       </fieldset>
       <fieldset class="py-3"><%= form.submit action, class: 'form-control bg-primary text-white' %></fieldset>
     <% end %>

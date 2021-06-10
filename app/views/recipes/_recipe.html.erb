@@ -1,1 +1,7 @@
-<li><%= recipe.description %></li>
+<div class='list-group-item list-group-item-action'>
+  <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1"><%= link_to recipe.user.fullname, user_path(recipe.user), class: 'btn btn-light' %></h6>
+      <small><%= time_ago_in_words(recipe.created_at) %> ago</small>
+    </div>
+  <p class="mb-1"><%= recipe.description %></p>
+</div>
