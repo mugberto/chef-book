@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect_to new_session_path, notice: 'Signed up successfully'
     else
       flash.now[:alert] = 'Sign up not successful'
-      render :new
+      render 'new', layout: 'auth_layout'
     end
   end
 
