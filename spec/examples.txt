@@ -1,15 +1,17 @@
 example_id                             | status | run_time        |
 -------------------------------------- | ------ | --------------- |
-./spec/features/sign_up_spec.rb[1:1]   | passed | 1.36 seconds    |
-./spec/features/sign_up_spec.rb[1:2]   | passed | 0.0262 seconds  |
-./spec/features/sign_up_spec.rb[1:3]   | passed | 0.02594 seconds |
-./spec/models/following_spec.rb[1:1:1] | passed | 0.00095 seconds |
-./spec/models/following_spec.rb[1:1:2] | passed | 0.00628 seconds |
-./spec/models/recipe_spec.rb[1:1:1]    | passed | 0.00691 seconds |
-./spec/models/recipe_spec.rb[1:2:1]    | passed | 0.00394 seconds |
-./spec/models/user_spec.rb[1:1:1]      | passed | 0.00118 seconds |
-./spec/models/user_spec.rb[1:1:2]      | passed | 0.00109 seconds |
-./spec/models/user_spec.rb[1:1:3]      | passed | 0.00289 seconds |
-./spec/models/user_spec.rb[1:2:1]      | passed | 0.00386 seconds |
-./spec/models/user_spec.rb[1:2:2]      | passed | 0.02419 seconds |
-./spec/models/user_spec.rb[1:2:3]      | passed | 0.0271 seconds  |
+./spec/features/log_in_spec.rb[1:1]    | passed | 1.4 seconds     |
+./spec/features/log_in_spec.rb[1:2]    | passed | 0.02187 seconds |
+./spec/features/sign_up_spec.rb[1:1]   | passed | 0.02625 seconds |
+./spec/features/sign_up_spec.rb[1:2]   | passed | 0.02797 seconds |
+./spec/features/sign_up_spec.rb[1:3]   | passed | 0.02589 seconds |
+./spec/models/following_spec.rb[1:1:1] | passed | 0.00543 seconds |
+./spec/models/following_spec.rb[1:1:2] | passed | 0.00098 seconds |
+./spec/models/recipe_spec.rb[1:1:1]    | passed | 0.00132 seconds |
+./spec/models/recipe_spec.rb[1:2:1]    | passed | 0.00892 seconds |
+./spec/models/user_spec.rb[1:1:1]      | passed | 0.00105 seconds |
+./spec/models/user_spec.rb[1:1:2]      | passed | 0.00106 seconds |
+./spec/models/user_spec.rb[1:1:3]      | passed | 0.03233 seconds |
+./spec/models/user_spec.rb[1:2:1]      | passed | 0.01855 seconds |
+./spec/models/user_spec.rb[1:2:2]      | passed | 0.01174 seconds |
+./spec/models/user_spec.rb[1:2:3]      | passed | 0.00359 seconds |

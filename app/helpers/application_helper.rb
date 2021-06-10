@@ -15,7 +15,9 @@ module ApplicationHelper
   end
 
   def avatar
-    return image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle' if current_user.photo != ''
+    if !current_user.photo.nil? or !current_user.photo.nil?
+      return image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle'
+    end
 
     image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
       'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg',\
