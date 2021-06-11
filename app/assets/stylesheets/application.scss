@@ -11,15 +11,42 @@
  * It is generally better to create a new file per style scope.
  */
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-body {
-  background-color: rgb(181, 196, 196);
-}
 
 .top-nav-bg { background-color: #51A2E1;}
 
-.app-aside {
-  background-color: rgb(0, 48, 0);
+.aside-user-bg { background-color: #1B2A3D;}
+
+.aside-nav-bg { background-color: #213246;}
+
+.aside-link { 
+  color: #697F94;
+}
+
+.aside-link:hover{
+  background-color: #51A2E1;
+  color: white;
+}
+
+.aside-count {
+  border: 1px solid #121a24;
+}
+
+.aside-count-number {
+  font-size: 1.25rem;
+}
+
+.aside-count-title {
+  color: #697F94;
+  font-size: .85rem;
+}
+
+.aside-user-fullname {
+  color: #697F94;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .brand-logo {
@@ -30,6 +57,27 @@ body {
   height: calc(100vw / 5);
   background-position: center;
   background-size: cover;
+}
+
+.avatar-container {
+  height: calc( 25vw - 2rem );
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and ( min-width: 768px ) {
+  .avatar-container {
+    height: calc( ( 25vw - 2rem ) * 0.3333 );
+  }
+}
+
+@media screen and ( min-width: 1200px ) {
+  .avatar-container {
+    height: calc( ( 16.66vw - 2rem ) * 0.3333 );
+  }
 }
 
 .avatar-image {

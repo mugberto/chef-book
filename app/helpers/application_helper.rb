@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def avatar
-    if (!current_user.photo != '') and !current_user.photo.nil?
+    if (current_user.photo != '') and !current_user.photo.nil?
       return image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle'
     end
 

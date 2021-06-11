@@ -19,6 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Install bootstrap 5
 gem 'bootstrap', '~> 5.0.1'
+# Add fontawesome icons library
+gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
