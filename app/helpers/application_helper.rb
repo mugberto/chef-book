@@ -11,7 +11,7 @@ module ApplicationHelper
     return '' unless current_user
 
     content_tag(:span, "Hi #{current_user.fullname}!") + \
-      link_to('Log out', session_path(1), method: :delete, class: 'btn btn-secondary ms-3')
+      link_to('Log out', session_path(1), method: :delete, class: 'btn btn-light btn-sm ms-3')
   end
 
   def avatar
