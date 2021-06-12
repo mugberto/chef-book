@@ -1,11 +1,11 @@
 module UsersHelper
   def follow_btn(user)
     if user == current_user
-      button_to 'follow', follow_path, params: { followed_id: user.id }, disabled: true, class: 'btn btn-secondary'
+      button_to 'follow', follow_path, params: { followed_id: user.id }, disabled: true, class: 'chef-btn-disabled'
     elsif current_user.followed_user? user
-      button_to 'unfollow', unfollow_path, params: { followed_id: user.id }, method: :delete, class: 'btn btn-success'
+      button_to 'unfollow', unfollow_path, params: { followed_id: user.id }, method: :delete, class: 'chef-btn-1'
     else
-      button_to 'follow', follow_path, params: { followed_id: user.id }, class: 'btn btn-success'
+      button_to 'follow', follow_path, params: { followed_id: user.id }, class: 'chef-btn-1'
     end
   end
 

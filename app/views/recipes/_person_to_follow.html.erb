@@ -1,1 +1,5 @@
-<li class='list-group-item'><%= link_to person_to_follow.fullname, user_path(person_to_follow), class: 'btn btn-light' %><%= follow_btn person_to_follow %></li>
+<li class='list-group-item border-0 d-flex'>
+<div class="timeline-avatar-container"><%= profile_picture person_to_follow %></div>
+<%= link_to person_to_follow.fullname, user_path(person_to_follow), class: 'btn btn-light align-self-center' %>
+<div class="ms-auto align-self-center"><%= follow_btn person_to_follow %></div>
+</li>
