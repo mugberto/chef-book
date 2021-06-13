@@ -30,6 +30,12 @@ Install gems with:
 bundle install
 ```
 
+Install yarn with:
+
+```
+install yarn --check-files
+```
+
 Setup database with:
 
 ```
