@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def profile_picture(user)
-    return image_tag user.photo, class: 'avatar-image rounded-circle d-block' if (user.photo != '') and !user.photo.nil?
+    return image_tag user.photo, class: 'avatar-image rounded-circle' if (user.photo != '') and !user.photo.nil?
 
     image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
       'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg',\
