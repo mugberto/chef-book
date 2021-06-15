@@ -1,23 +1,24 @@
-example_id                                       | status | run_time        |
------------------------------------------------- | ------ | --------------- |
-./spec/features/log_in_spec.rb[1:1]              | passed | 0.05588 seconds |
-./spec/features/log_in_spec.rb[1:2]              | passed | 0.04047 seconds |
-./spec/features/sign_up_spec.rb[1:1]             | passed | 0.05055 seconds |
-./spec/features/sign_up_spec.rb[1:2]             | passed | 0.02811 seconds |
-./spec/features/sign_up_spec.rb[1:3]             | passed | 1.46 seconds    |
-./spec/helpers/application_helper_spec.rb[1:1:1] | passed | 0.00179 seconds |
-./spec/helpers/application_helper_spec.rb[1:2:1] | passed | 0.00131 seconds |
-./spec/helpers/application_helper_spec.rb[1:3:1] | passed | 0.00176 seconds |
-./spec/helpers/application_helper_spec.rb[1:4:1] | passed | 0.00177 seconds |
-./spec/helpers/users_helper_spec.rb[1:1:1:1]     | passed | 0.00149 seconds |
-./spec/helpers/users_helper_spec.rb[1:1:2:1]     | passed | 0.01101 seconds |
-./spec/models/following_spec.rb[1:1:1]           | passed | 0.00142 seconds |
-./spec/models/following_spec.rb[1:1:2]           | passed | 0.00119 seconds |
-./spec/models/recipe_spec.rb[1:1:1]              | passed | 0.00697 seconds |
-./spec/models/recipe_spec.rb[1:2:1]              | passed | 0.00386 seconds |
-./spec/models/user_spec.rb[1:1:1]                | passed | 0.00126 seconds |
-./spec/models/user_spec.rb[1:1:2]                | passed | 0.00096 seconds |
-./spec/models/user_spec.rb[1:1:3]                | passed | 0.00259 seconds |
-./spec/models/user_spec.rb[1:2:1]                | passed | 0.00323 seconds |
-./spec/models/user_spec.rb[1:2:2]                | passed | 0.02385 seconds |
-./spec/models/user_spec.rb[1:2:3]                | passed | 0.00316 seconds |
+example_id                                         | status | run_time        |
+-------------------------------------------------- | ------ | --------------- |
+./spec/features/log_in_spec.rb[1:1]                | passed | 1.53 seconds    |
+./spec/features/log_in_spec.rb[1:2]                | passed | 0.03871 seconds |
+./spec/features/sign_up_spec.rb[1:1]               | passed | 0.02965 seconds |
+./spec/features/sign_up_spec.rb[1:2]               | passed | 0.03558 seconds |
+./spec/features/sign_up_spec.rb[1:3]               | passed | 0.05266 seconds |
+./spec/helpers/application_helper_spec.rb[1:1:1:1] | passed | 0.00152 seconds |
+./spec/helpers/application_helper_spec.rb[1:1:2:1] | passed | 0.00124 seconds |
+./spec/helpers/application_helper_spec.rb[1:2:1:1] | passed | 0.00132 seconds |
+./spec/helpers/application_helper_spec.rb[1:2:2:1] | passed | 0.00186 seconds |
+./spec/helpers/users_helper_spec.rb[1:1:1:1]       | passed | 0.00138 seconds |
+./spec/helpers/users_helper_spec.rb[1:1:2:1]       | passed | 0.00259 seconds |
+./spec/helpers/users_helper_spec.rb[1:1:3:1]       | passed | 0.00247 seconds |
+./spec/models/following_spec.rb[1:1:1]             | passed | 0.00112 seconds |
+./spec/models/following_spec.rb[1:1:2]             | passed | 0.00084 seconds |
+./spec/models/recipe_spec.rb[1:1:1]                | passed | 0.00114 seconds |
+./spec/models/recipe_spec.rb[1:2:1]                | passed | 0.00309 seconds |
+./spec/models/user_spec.rb[1:1:1]                  | passed | 0.00119 seconds |
+./spec/models/user_spec.rb[1:1:2]                  | passed | 0.00127 seconds |
+./spec/models/user_spec.rb[1:1:3]                  | passed | 0.00138 seconds |
+./spec/models/user_spec.rb[1:2:1]                  | passed | 0.00429 seconds |
+./spec/models/user_spec.rb[1:2:2]                  | passed | 0.01224 seconds |
+./spec/models/user_spec.rb[1:2:3]                  | passed | 0.0066 seconds  |

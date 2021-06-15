@@ -13,47 +13,51 @@ require 'rails_helper'
 RSpec.describe ApplicationHelper, type: :helper do
   helper_method :current_user
 
-  describe '#log_in_menu when a user is signed in' do
-    def current_user
-      User.new(username: 'Username', fullname: 'User')
+  describe '#login_menu' do
+    context 'when a user is signed in' do
+      def current_user
+        User.new(username: 'Username', fullname: 'User')
+      end
+      it 'should display the menu' do
+        menu_items = '<span>Hi User!</span><a class="btn btn-light btn-sm ms-3"'\
+        ' rel="nofollow" data-method="delete" href="/sessions/1">Log out</a>'
+        expect(log_in_menu).to eql menu_items
+      end
     end
-    it 'should display the menu' do
-      menu_items = '<span>Hi User!</span><a class="btn btn-light btn-sm ms-3"'\
-      ' rel="nofollow" data-method="delete" href="/sessions/1">Log out</a>'
-      expect(log_in_menu).to eql menu_items
+
+    context 'when no user is signed in' do
+      def current_user; end
+
+      it 'should display nothing' do
+        menu_items = ''
+        expect(log_in_menu).to eql menu_items
+      end
     end
   end
 
-  describe '#log_in_menu when no user is signed in' do
-    def current_user; end
+  describe '#avatar' do
+    context 'when a no image link is provided' do
+      def current_user
+        User.new(username: 'Username', fullname: 'User')
+      end
+      it 'displays a place holder image' do
+        place_holder = image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
+        'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg',\
+                                 class: 'rounded-circle w-100'
+        expect(avatar).to eql place_holder
+      end
+    end
 
-    it 'should display nothing' do
-      menu_items = ''
-      expect(log_in_menu).to eql menu_items
-    end
-  end
-
-  describe '#avatar when a no image link is provided' do
-    def current_user
-      User.new(username: 'Username', fullname: 'User')
-    end
-    it 'displays a place holder image' do
-      place_holder = image_tag 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
-      'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg',\
-                               class: 'rounded-circle w-100'
-      expect(avatar).to eql place_holder
-    end
-  end
-
-  describe '#avatar when an image link is provided' do
-    def current_user
-      photo_url = 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
-      'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg'
-      User.new(username: 'Username', fullname: 'User', photo: photo_url)
-    end
-    it 'displays a user photo' do
-      image = image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle'
-      expect(avatar).to eql image
+    context 'when an image link is provided' do
+      def current_user
+        photo_url = 'https://raw.githubusercontent.com/mugberto/chefbook-images/'\
+        'c63eb908b48acba9f5ead4ee181c7a81c111de1e/Images/avatar-1577909.svg'
+        User.new(username: 'Username', fullname: 'User', photo: photo_url)
+      end
+      it 'displays a user photo' do
+        image = image_tag current_user.photo, class: 'avatar-image w-100 rounded-circle'
+        expect(avatar).to eql image
+      end
     end
   end
 end
