@@ -63,10 +63,10 @@ body { background-color: #f5f6f8; }
 
 .chef-btn-disabled {
   color: white;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   border: 1px solid transparent;
   padding: 0.275rem 0.65rem;
-  font-size: .85rem;
+  font-size: 0.85rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -76,7 +76,7 @@ body { background-color: #f5f6f8; }
   background-color: #51a2e1;
   border: 1px solid transparent;
   padding: 0.275rem 0.65rem;
-  font-size: .85rem;
+  font-size: 0.85rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -126,10 +126,6 @@ body { background-color: #f5f6f8; }
   height: 14.0625vw;
 }
 
-.profile-picture-container {
-  height: 14.0625vw;
-}
-
 @media screen and (min-width: 768px) {
   .profile-picture-container {
     height: 14.0625vw;
@@ -144,12 +140,12 @@ body { background-color: #f5f6f8; }
 
 .recipe-time {
   color: #555;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .recipe-text {
   color: #555;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .all-users-list {
