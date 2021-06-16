@@ -1,0 +1,23 @@
+<div class='row aside-user-bg py-5 px-3'>
+  <div class='col-sm-12 col-md-4 p-0 aside-avatar-container'>
+    <%= avatar %>
+  </div>
+  <div class='col-sm-12 col-md-8 text-center d-flex justify-content-center p-4 p-md-0 align-items-center'>
+    <div class='aside-user-fullname'><%= current_user.fullname %></div>
+  </div>
+</div>
+<div class='row aside-user-bg pt-2'>
+  <div class='aside-count col-6 py-3'>
+    <div class='aside-count-number text-center'><%= current_user.followers.count %></div>
+    <div class='aside-count-title text-center'>followers</div>
+  </div>
+  <div class='aside-count col-6 py-3'>
+    <div class='aside-count-number text-center'><%= current_user.people_he_follows.count%></div>
+    <div class='aside-count-title text-center'>following</div>
+  </div>
+</div>
+<nav class='row'>
+  <%= link_to icon('fa', 'home') + content_tag(:span,"HOME", class: 'ms-3'), root_path, class:'aside-link d-block btn btn-outline-light py-3 px-3 border-0 rounded-0 text-start' %>
+  <%= raw link_to icon('fa', 'users') + content_tag(:span,"CONNECT", class: 'ms-3'), users_path, class:'aside-link d-block  btn btn-outline-light py-3 px-3 border-0 rounded-0 text-start' %>
+  <%= link_to icon('fa', 'user-alt') + content_tag(:span,"PROFILE", class: 'ms-3'), edit_user_path(current_user), class:'aside-link d-block btn btn-outline-light py-3 px-3 border-0 rounded-0 text-start' %>
+</nav>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChefBook</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class='container-fluid'>
+      <div class="row">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: msg_background(name) %>
+        <% end %>
+      </div>
+      <div class='row'>
+        <aside class='app-aside aside-nav-bg d-flex flex-column col-3 col-xl-2 text-white'>
+          <%= render 'layouts/aside' %>
+        </aside>
+        <div class='col-9 col-xl-10'>
+          <nav class='row px-4 py-3 top-nav top-nav-bg text-white justify-content-between'>
+            <%= render 'layouts/navbar' %>
+          </nav>
+          <div class='row flex-nowrap'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </body>
+</html>

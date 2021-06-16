@@ -1,0 +1,45 @@
+
+
+<div class="col-md-9 bg-light">
+  <div class="row">
+    <div class='cover-image' style=<%= cover_image(current_user) %>></div>
+  </div>
+  <div class="row border-bottom">
+    <h2 class='fs-6 m-0 p-3'>EDIT YOUR PROFILE</h2>
+  </div>
+
+  <div class="p-4"><%= render 'sign_up_form', user: current_user, action: 'Modify' %></div>
+</div>
+
+<div class="col-md-3 border-start bg-light">
+  <div class='row pt-4'>
+    <div class='profile-picture-container p-0 w-75 mx-auto'>
+      <%= profile_picture @user %>
+    </div>
+    <div class='aside-user-fullname text-center p-3'><%= @user.fullname %></div>
+    <div class="text-center px-3 pb-3"><%= follow_btn @user %></div>
+  </div>
+
+  <div class='row border-bottom'>
+    <div class='col-4 p-3 border-top'>
+      <div class='text-center'><%= @user.recipes.count %></div>
+      <div class='text-center aside-count-title'>Recipes</div>
+    </div>
+    <div class='col-4 p-3 border border-bottom-0'>
+      <div class='text-center'><%= @user.followers.count %></div>
+      <div class='text-center aside-count-title'>followers</div>
+    </div>
+    <div class='col-4 p-3 border-top'>
+      <div class='text-center'><%= @user.people_he_follows.count%></div>
+      <div class='text-center aside-count-title'>following</div>
+    </div>
+  </div>
+
+  <div class="row py-4">
+    <h2 class="fs-6"><%= @user.fullname %>'s followers</h2>
+    <ul>
+      <%= render partial: 'recipes/person_to_follow', collection: @user.followers %>
+    </ul>
+  </div>
+
+</div>
