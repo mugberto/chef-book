@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body { background-color: #f5f6f8; }
+
+.top-nav-bg { background-color: #51a2e1; }
+
+.aside-user-bg { background-color: #1b2a3d; }
+
+.aside-nav-bg { background-color: #213246; }
+
+.aside-link {
+  color: #697f94;
+}
+
+.aside-link:hover {
+  background-color: #51a2e1;
+  color: white;
+}
+
+.aside-count {
+  border: 1px solid #121a24;
+}
+
+.aside-count-number {
+  font-size: 1.25rem;
+}
+
+.aside-count-title {
+  color: #697f94;
+  font-size: 0.85rem;
+}
+
+.profile-count-title {
+  color: #697f94;
+  font-size: 0.85rem;
+}
+
+.who-to-follow-name {
+  color: #494949;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.aside-user-fullname {
+  color: #697f94;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.chef-btn-disabled {
+  color: white;
+  background-color: #aaa;
+  border: 1px solid transparent;
+  padding: 0.275rem 0.65rem;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.chef-btn-1 {
+  color: white;
+  background-color: #51a2e1;
+  border: 1px solid transparent;
+  padding: 0.275rem 0.65rem;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.chef-btn-1:hover {
+  background-color: #3875a3;
+}
+
+.brand-logo {
+  max-height: 2.5rem;
+}
+
+.cover-image {
+  height: calc(100vw / 5);
+  background-position: center;
+  background-size: cover;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aside-avatar-container {
+  height: calc(25vw - 2rem);
+}
+
+.timeline-avatar-container {
+  height: 3rem;
+  width: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .aside-avatar-container {
+    height: calc(( 25vw - 2rem ) * 0.3333);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .aside-avatar-container {
+    height: calc(( 16.66vw - 2rem ) * 0.3333);
+  }
+}
+
+.profile-picture-container {
+  height: 14.0625vw;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-picture-container {
+    height: 14.0625vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profile-picture-container {
+    height: 15.625vw;
+  }
+}
+
+.recipe-time {
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.recipe-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.all-users-list {
+  max-width: 50rem;
+}

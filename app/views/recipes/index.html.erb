@@ -1,0 +1,21 @@
+
+<div class="col-md-9 bg-light">
+  <div class="row border-bottom mb-3">
+    <h2 class="fs-6 m-0 p-3">RECIPES</h1>
+  </div>
+  <%= form_with model: @recipe, local: true, class: 'bg-white p-3 rounded border border-1' do |form| %>
+    <fieldset class="mb-3"><%= form.text_area :description, class:'form-control', placeholder: 'Add your recipe' %></fieldset>
+    <%= form.submit 'Add', class: 'chef-btn-1' %>
+  <% end %>
+  
+  <div class='list-group mt-3'><%= render @recipes %></div>
+</div>
+
+<div class="col-md-3 bg-white border-start">
+  <div class="row border-bottom">
+    <h3 class='fs-6 m-0 p-3'>HOW TO FOLLOW</h3>
+  </div>
+  <ul class='list-group'>
+    <%= render partial: 'person_to_follow', collection: @people_to_follow %>
+  </ul>
+</div>
